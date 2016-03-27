@@ -1,66 +1,2614 @@
-“New Year’s eve is like every other night; there is no pause in the march of the universe, no breathless moment of silence among created things that the passage of another twelve months may be noted; and yet no man has quite the same thoughts this evening that come with the coming of darkness on other nights”
-Hamilton Wright Mabie
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+   <title>Your browser history can be sniffed with just 64 lines of Python (tested with Firefox 3.5.3) | Zwillingssterns Weltenwald | 1w6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic' rel='stylesheet' type='text/css' />-->
+<meta name="verify-v1" content="+km7c6e6b65lr3QdaH3e0kfZGMYqxRuD1OaxV0VR0rA=" />
 
-The year is coming to an end. Just one more day to go.
+<!--print the first chars of the content as description, if this is not the main page.-->
+<meta name="description" content="Fr, 10/02/2009 - 10:53 — Draketo After the example of making-the-web, I was quite intrigued by the ease of sniffing the history via simple CSS tricks. - Firefox Bug report - finally resolved fixed. - Start Panic! - a site dedicated to spreading the news about the vulnerability. So I decided to test, how small I get a Python program which can sniff the history via CS... 1w6" />
+<meta name="subject" content="Ein Würfel System - Einfach saubere Regeln" />
+<meta  name="keywords" content="RPG, Rollenspiel, Universell, Science Fiction, Fantasy, RaumZeit, Technophob, Python, Freie Lizenz, GPL, Regeln, Freie Software, Würfel" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Arne Babenhauserheide" />
+<meta name="resolution" content="1024x768" />
+<meta name="language" content="de" />
 
-But before we step through that doorway I’d like to quickly share one last article with 5 of my favorite questions that can help you shape 2016 into a focused, self-kinder and more successful year.
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://1w6.org/blogapi/rsd" />
 
-Stay safe, enjoy your New Year’s celebration and see you next year!
+<link rel="alternate" type="application/rss+xml" title="Ein Würfel System RSS" href="http://1w6.org/rss.xml" />
 
-1. Is this useful?
+<!--Javascript stuff. TODO: Replace with nice CSS-based button-collapsing.-->
 
-It’s very easy to spend a lot of time on things that do not really matter much. To spend hours, days or even weeks on being angry at someone, replaying a mistake or failure in one’s mind or to dwell on something negative and feeling more and more like a victim.
+<script type="text/javascript" src="/misc/jquery.js?7"></script>
+<script type="text/javascript" src="/misc/drupal.js?7"></script>
+<script type="text/javascript" src="/misc/tableheader.js?7"></script>
+<script type="text/javascript" src="/modules/subscriptions/subscriptions_tableselect.js?7"></script>
+<script type="text/javascript" src="/misc/collapse.js?7"></script>
+<script type="text/javascript" src="/misc/textarea.js?7"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
 
-So I try to ask myself this question as often as I can to question and confront my own thoughts.  To catch myself and to wake myself up when I get stuck in negative thought loops going round and round.
+<!--babcode: PHP special date switch.-->
 
-By doing so I:
 
-    Suffer less.
-    Waste less time on going round in circles.
-    Spend more of my time on finding a practical solution.
+<!-- viewport so the device can adapt -->
 
-2. What is the most important thing I can do right now?
+<meta name="viewport" content="width=device-width, initial-scale=0.5" />
 
-If you get lost in what to do in your day, week and life then this question can be very helpful.
+<!-- babcode: Hand-aggregated css to get a faster startpage. -->
 
-It might not always give you the answer you want, because the most important thing you can do right now is often one of the harder things you can do.
+    <style type="text/css" media="all">
+<!--
+/*@font-face {
+    font-family: Fanwood;
+    src: url(/releases/Fanwood.otf) format("opentype");
+}
 
-But it will help you to truly focus on the few things that matters the most in any area of your life. And if it feels too hard to get started with that then just ask yourself…
+@font-face {
+    font-family: GoudyStMM;
+    src: url(/releases/GoudyStM.otf) format("opentype");
+}
 
-3. What is one small step I can take right now to get the ball rolling?
+@font-face {
+    font-family: GoudyBookletter1911;
+    src: url(/releases/GoudyBookletter1911.otf) format("opentype");
+}
 
-This is my favorite question for when I want to get started with something or if I want to get going again with something that have fallen to the side for some reason.
+@font-face {
+    font-family: HattoriHanzo;
+    src: url(/releases/HattoriHanzo.ttf) format("truetype");
+}*/
 
-Because it makes things easier. Makes them feel lighter.
+body {
+  font-family: sans-serif, Arial, Georgia, FreeSans, "Bitstream Charter", "Nimbus Roman No9 L", Roman, "Times New Roman", "Bitstream Vera Serif", "Linux Libertine", Serif;
+    /*columns: 20em;*/
+    font-size: 13pt;
+	font-weight: light;
+    background-color: white;
+    background-image: url(/releases/Dragons_original_EWS_Logo_blass2.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0px;
+}
 
-This question prevents me from trying to escape into procrastination and helps me to avoid the side-effects of that such as sinking self-esteem, self-loathing and simply a lot of time being wasted on trying to hide.
+p, li, #ews_zitat {
+	line-height: 1.45;
+}
 
-4. Is there anyone on the planet having it worse than me right now?
+li {
+  margin-bottom: 0.38em;
+}
 
-This question does seldom deliver enjoyable answers, but it sure does snap me out of negative thinking or feeling sorry for myself.
+/*b, strong {
+    font-family: Fanwood, Georgia, Arial, Sans, Vn Nimbus Roman No9 L, Nimbus Roman No9 L, Vn GaramondNo8, URW Bookman L, Linux Libertine, Times New Roman, Bitstream Charter, Bitstream Vera Serif, Serif;
+}*/
 
-Now, I think it is natural to sometimes feel sad or sorry for yourself for a little while. If you don’t take the time to process such natural responses to negative situations then those feelings can pop up later. And so you feel inexplicably sad or you might get angry or irritated at other people for no good reason.
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: Georgia, Bitstream Vera Serif, Bitstream Charter, Arial, Nimbus Roman No9 L, FreeSans, Linux Libertine, Times New Roman, Serif;
+}
 
-But my experience is also that these things can go too far. It’s easy to get stuck in these disempowering thoughts for too long.
+body em {
+    color: #666;
+}
 
-So I like to use this question to zoom out when I feel that my perspective has become too self-centered and narrow.
+body .aside {
+    background: none repeat scroll 0 0 #eaeaea; /* white */
+    border-right: 1px dashed black; 
+    /* border-right: 1px solid #e6e9fe; */
+    position: absolute;
+    float: left;
+    margin: 0px;
+    top: 0px;
+	padding-top: 10px;
+    left: 0px;
+    width: 215px;
+    min-height: 100%;
+    color: gray;
+    opacity: 0.93;
+	padding-right: 16px;
+    padding-left: 0.5em;
+    /*    line-height: 120%;*/
+/*    background: #eef7fe;*/
+}
 
-And it has over the years taught me a lot about the things that I too often may take for granted but can be very grateful to have in my life.
+body .aside:hover {
+    z-index: 2; /* show in front of the main text on hover for small screens */
+}
 
-5. Will this matter in 5 years? Or even 5 weeks?
+.about {
+    z-index: 3;
+}
 
-This one helps me to simplify.
+body .aside .left-links {
+    margin-top: -50px;
+/*    margin-bottom: 2em;*/
+    padding-left: 5px;
+}
 
-To let go.
+body .aside .linkheader {
+    padding-left: 18px;
+}
 
-To not make a mountain out of a molehill.
+.site-info-onload, .site-info-onload a, .site-info-onload a:visited {
+  position: absolute;
+  z-index: -5;
+  color: #eaeaea;
+  text-align: center;
+  width: 190px;
+  top: 0px;
+  left: 0px;
+  padding: 5px;
+}
 
-To find the healthier and happier perspective.
+#logo {
+}
 
-To not lose my focus and energy to crippling worries.
+.aside h1, .aside h2, #ews_zitat h1, #ews_zitat h2 {
+    font-variant: small-caps;
+    border-bottom: 1px dashed #0a0;
+    font-size: large;
+}
 
-To find a lightness in life where I do not have to carry around 5 tons of unnecessary mental baggage.
+#ews_zitat h1, #ews_zitat h2, #ews_zitat h3, #ews_zitat h4 {
+    color: gray;
+}
 
-It’s a truly wonderful question.
 
-Image by Atli Harðarson (license).
+#die {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+    min-height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+#die #dieside {
+    margin-top: 1em;
+/*    display: none;*/
+    text-align: left;
+    padding-bottom: 10em; /* so it does not disappear too easily */
+}
+
+#die:hover #dieside {
+/*    display: block;*/
+}
+
+#die #dieside a {
+    color: gray;
+}
+#die:hover #dieside a:visited {
+    color: gray;
+}#die:hover #dieside a {
+    color: #0b5e93;
+}
+#die:hover #dieside a:visited {
+    color: #59d;
+}
+
+
+#diemap a{
+    display:block;
+    position:absolute;
+    background: none;
+}
+
+#diemap a#dielink1 {
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 80px;
+}
+
+#diemap a#dielink2 {
+    top: 40px;
+    left: 0px;
+    height: 60px;
+    width: 40px;
+}
+
+#diemap a#dielink3 {
+    top: 40px;
+    left: 40px;
+    height: 60px;
+    width: 40px;
+}
+
+.article {
+	z-index: 1; /* show in front of the aside.*/
+    text-align: justify;
+    background-color: white;
+    background-image: url(/releases/wuerfel_blass2-bindright.jpg); /*226*/
+    background-repeat: no-repeat;
+    background-position: right 847px;
+    width: 50%;
+    min-width: 35em;
+    max-width: 55em;
+    left: auto;
+    right: 50%;
+    margin-right: -17.5em;
+    position: absolute;
+    top: 0px;
+    margin-top: 0px;
+/* Multi-column layout for tablets and such */
+/*    -moz-column-count: 2; 
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 4em;
+    -webkit-column-gap: 4em;
+    column-gap: 4em;
+    height: 42em; */
+}
+
+.section {
+  padding-left: 4em;
+  padding-right: 4em;
+  border: 1px solid #e6e9fe;
+ }
+
+.section .header h1:before {
+    content: url(würfel-20x25.png) " ";
+}
+
+.nav, article .aside {
+    border-style: ridge;
+    border-color: Maroon;
+    padding: 0.3em;
+    float: right;
+    background-color: Wheat;
+    max-width: 20em;
+/*    font-family: GoudyBookletter1911;*/
+    margin-left: 0.5em;
+}
+
+.section .aside {
+    text-align: center;
+}
+
+
+body .header {
+    font-size: xx-large;
+    text-align: center;
+    float: left;
+}
+
+.article .header, .section .header, .nav .header {
+    font-size: x-large;
+}
+
+.section .header h1 {
+}
+
+.section h2, .section .header h2 {
+    font-size: x-large;
+}
+
+.section .header h1 .subtitle {
+    font-size: medium;
+    font-style: oblique;
+    display: inline;
+}
+
+.section .header h1 .subtitle:before {
+    content: "»"
+}
+
+.section .header h1 .subtitle:after {
+    content: "«"
+}
+
+.breadcrumb, .breadcrumb a, .breadcrumb a:visited {
+    color: #aaa;
+    font-size: small;
+}
+.breadcrumb a:hover {
+    color: #0b5e93;
+}
+
+// Taken from pybrary.net which is really beautifully designed.
+
+a:link
+{
+    color: #03f;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #02a;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1, h2, h3
+{
+  /*font-variant: small-caps;*/
+}
+
+h2
+{
+    border-bottom: 1px dashed #0a0;
+}
+
+h1, h1 a, h1 a:link, h1 a:visited
+{
+    padding-bottom: 0.2em;
+    color: #c80;
+    font-size: xx-large;
+    text-align: center;
+}
+
+h2
+{
+    padding-bottom: 0.1em;
+    color: #c40;
+    font-size: 150%;
+}
+
+h3
+{
+    color: #c00;
+    font-size: 100%;
+}
+
+pre, pre.src {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 5px 10px;
+    background: #eee;
+    color: #000;
+    border: 1px dashed #000;
+    overflow: auto;
+}
+
+img.footerImage
+{
+    border: none;
+    float: right;
+}
+
+div.footer
+{
+    margin-bottom: 2em;
+}
+
+li
+{
+    list-style-type: circle;
+}
+
+ul.downloadLinks > li
+{
+    list-style-image: url("/right-arrow-blue.png");
+}
+
+.py_Identifier
+{
+    color: #0aa;
+    font-weight: bold;
+}
+
+.py_Constant, .py_Normal
+{
+    color: #a4a;
+    font-weight: bold;
+}
+
+.py_Statement
+{
+    color: #aa0;
+    font-weight: bold;
+}
+
+.py_PreProc
+{
+    color: #44a;
+    font-weight: bold;
+}
+
+.py_Comment
+{
+    color: #0a0;
+    font-style: italic;
+}
+
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+/**
+ * Stilelemente für Strukturen für's EWS.
+ */
+
+.raumzeit_einleitungszitat {
+  text-align: left;
+  font-style: italic;
+  font-size: 90%;
+}
+
+.raumzeit_einleitungszitat_autor {
+  text-align: right;
+}
+
+.seitenleiste {
+  float: right;
+  padding-left: 4%;
+  margin-left: 1em;
+  width: 34%; /* 0.61803*padding + seitenleiste = 1-0.61803 */
+  z-index: 1;
+  background-color: white;
+  border-left-color: gray;
+  border-left-width: thin;
+  border-left-style: solid;
+  border-top-color: gray;
+  border-top-width: thin;
+  border-top-style: solid;
+  border-bottom-color: gray;
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+}
+
+.seitenleiste li {
+  margin-left: -1.5em;
+}
+
+.seitenleiste_zitat {
+  float: right;
+  margin-left: 1em;
+  font-style: italic;
+}
+
+.seitenleiste_titel {
+  font-style: italic;
+}
+
+.regelteil {
+  position: relative;
+  font-family:'Nimbus Mono', serif;
+  border-width: thin;
+  border-style: dashed;
+  width: 58%;
+  padding: .3em;
+}
+
+.markenrecht {
+  font-size: 90%;
+}
+
+.modulinfo {
+  font-style: italic;
+}
+
+.kasten {
+    border-style: ridge;
+    border-color: Maroon;
+    padding: 0.3em;
+    background-color: Wheat;
+/*    font-family: GoudyBookletter1911;*/
+    margin-left: 0.5em;
+}
+
+.picture, .comment .submitted {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+    clear: right;
+    float: right;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 5px;
+}
+.kasten {
+    /*
+    background-color: #6BA2CC;
+    border-radius: 20px 1px 1px 1px;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 0px;
+    border-right: 0px;
+    border-right: 0px !important;
+    box-shadow: 0px 3px 10px gray;
+    */
+    color: black;
+    margin: 10px 10px 30px;
+    padding: 5px;
+    text-align: justify;
+    clear: both;
+    border-top: 1px solid gray !important;
+    border-right: 1px solid gray !important;
+    border-left: 0px none gray !important;
+    border-bottom: 1px solid gray !important;
+    margin-left: -1.5em;
+    padding-left: 1.5em; 
+    background-color: #f6efca;
+    border-top: thin solid gray;
+    border-right: thin solid gray;
+    border-bottom: thin solid gray;
+    border-radius: 0 10px 10px 0;
+    float: left;
+    margin-right: 4%;
+    width: 96%;
+    padding-right: 4%;
+    z-index: 1;
+    margin-bottom:20px;/*#ededed;#f2ebad;#f6efca;#CFCFCF*/
+}
+
+.kasten strong {
+    font-weight: 600;
+}
+
+.node .links, .comment .links {
+    margin-top: 60px;
+    text-align: left;
+}
+.seitenleiste {
+    background-color: #CFCFCF;
+    border-bottom: thin solid gray;
+    border-left: thin solid gray;
+    border-radius: 10px 0 0 10px;
+    border-top: thin solid gray;
+    float: right;
+    margin-right: -1.5em;
+    padding-right: 1.5em;
+    padding-left: 4%;
+    padding-right: 5px;
+    width: 34%;
+    z-index: 1;
+    margin-bottom:20px;
+}
+.content .dialog p {
+    padding-left: 20px;
+    padding-right: 10px;
+    text-indent: -15px;
+}﻿
+ /* I do not understand at all why I need this hack. But I do.*/
+.hackflubbbub p {
+    ignore: this-anyway-bug;
+}
+
+.kasten p, .dialog .kasten p {
+    padding-left: 0.3em;
+    padding-right: 0px;
+    text-indent: 0px;
+}
+
+.seitenleiste p, .dialog .seitenleiste p {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-indent: 0px;
+}
+
+fuss {
+    font-size: small;
+}
+
+
+.book-navigation .menu {
+  border-top: 1px solid #888;
+  padding: 1em 0 0 3em;
+}
+
+/* $Id: node.css,v 1.2 2006/09/05 03:50:56 unconed Exp $ */
+
+td.revision-current {
+  background: #ffc;
+}
+.node-form .form-text {
+  display: block;
+  width: 95%;
+}
+.node-form .container-inline .form-text {
+  display: inline;
+  width: auto;
+}
+.node-form .standard {
+  clear: both;
+}
+.node-form textarea {
+  display: block;
+  width: 95%;
+}
+.node-form .attachments fieldset {
+  float: none;
+  display: block;
+}
+
+/* $Id: poll.css,v 1.2 2006/10/02 16:16:06 dries Exp $ */
+
+.poll .bar {
+  height: 1em;
+  margin: 1px 0;
+  background-color: #ddd;
+}
+.poll .bar .foreground {
+  background-color: #000;
+  height: 1em;
+  float: left;
+}
+.poll .links {
+  text-align: center;
+}
+.poll .percent {
+  text-align: right;
+}
+.poll .total {
+  text-align: center;
+}
+.poll .vote-form {
+  text-align: center;
+}
+.poll .vote-form .choices {
+  text-align: left;
+  margin: 0 auto;
+  display: table;
+}
+.node-form .poll-form fieldset {
+  display: block;
+}
+
+
+/* $Id: defaults.css,v 1.2 2006/08/25 09:01:12 drumm Exp $ */
+
+/*
+** HTML elements
+*/
+fieldset {
+  margin-bottom: 1em;
+  padding: .5em;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  height: 1px;
+  border: 1px solid gray;
+}
+img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  padding-right: 1em;
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Markup free clearing
+** Details: http://www.positioniseverything.net/easyclearing.html
+*/
+.clear-block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block {
+  height: 1%;
+}
+.clear-block {
+  display: block;
+}
+/* End hide from IE-mac */
+
+
+
+/* $Id: system.css,v 1.21 2006/12/21 16:13:06 dries Exp $ */
+
+/*
+** HTML elements
+*/
+th.active img {
+  display: inline;
+}
+tr.even, tr.odd {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+td.active {
+  background-color: #ddd;
+}
+tbody {
+  border-top: 1px solid #ccc;
+}
+tbody th {
+  border-bottom: 1px solid #ccc;
+}
+thead th {
+  text-align: left;
+  padding-right: 1em;
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Other common styles
+*/
+.breadcrumb {
+  padding-bottom: .5em
+}
+.error {
+  color: #f00;
+}
+div.error {
+  border: 1px solid #d77;
+}
+div.error, tr.error {
+  background: #fcc;
+  color: #200;
+}
+div.warning, tr.warning {
+  background: #ffd;
+}
+div.ok, tr.ok {
+  background: #dfd;
+}
+.item-list .icon {
+  color: #555;
+  float: right;
+  padding-left: 0.25em;
+  clear: right;
+}
+.item-list .title {
+  font-weight: bold;
+}
+.item-list ul {
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+.item-list ul li {
+  margin: 0 0 0.25em 1.5em;
+  padding: 0;
+  list-style: disc;
+}
+.form-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+tr.odd .form-item, tr.even .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+tr.merge-down, tr.merge-down td, tr.merge-down th {
+  border-bottom-width: 0 !important;
+}
+tr.merge-up, tr.merge-up td, tr.merge-up th {
+  border-top-width: 0 !important;
+}
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+  border: 2px solid red;
+}
+.form-item .description {
+  font-size: 0.85em;
+}
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+.form-item label.option {
+  display: inline;
+  font-weight: normal;
+}
+.form-checkboxes, .form-radios {
+  margin: 1em 0;
+}
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.marker, .form-required {
+  color: #f00;
+}
+.more-link {
+  text-align: right;
+}
+.more-help-link {
+  font-size: 0.85em;
+  text-align: right;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.pager {
+  clear: both;
+  text-align: center;
+}
+.pager a, .pager strong.pager-current {
+  padding: 0.5em;
+}
+.tips {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 0.9em;
+}
+dl.multiselect dd.b, dl.multiselect dd.b .form-item, dl.multiselect dd.b select {
+  font-family: inherit;
+  font-size: inherit;
+  width: 14em;
+}
+dl.multiselect dd.a, dl.multiselect dd.a .form-item {
+  width: 8em;
+}
+dl.multiselect dt, dl.multiselect dd {
+  float: left;
+  line-height: 1.75em;
+  padding: 0;
+  margin: 0 1em 0 0;
+}
+dl.multiselect .form-item {
+  height: 1.75em;
+  margin: 0;
+}
+
+/*
+** Inline items (need to override above)
+*/
+.container-inline div, .container-inline label {
+  display: inline;
+}
+
+/*
+** Menus
+*/
+ul.menu {
+  list-style: none;
+  border: none;
+  text-align:left;
+}
+ul.menu li {
+  margin: 0 0 0 0.5em;
+}
+li.expanded {
+  list-style-type: circle;
+  list-style-image: url(../../misc/menu-expanded.png);
+  padding: 0.2em 0.5em 0 0;
+  margin: 0;
+}
+li.collapsed {
+  list-style-type: disc;
+  list-style-image: url(../../misc/menu-collapsed.png);
+  padding: 0.2em 0.5em 0 0;
+  margin: 0;
+}
+li.leaf {
+  list-style-type: square;
+  list-style-image: url(../../misc/menu-leaf.png);
+  padding: 0.2em 0.5em 0 0;
+  margin: 0;
+}
+li a.active {
+  color: #000;
+}
+td.menu-disabled {
+  background: #ccc;
+}
+ul.links {
+  margin: 0;
+  padding: 0;
+}
+ul.links.inline {
+  display: inline;
+}
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+.block ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em;
+}
+
+/*
+** Tab navigation
+*/
+ul.primary {
+  border-collapse: collapse;
+  padding: 0 0 0 1em;
+  white-space: nowrap;
+  list-style: none;
+  margin: 5px;
+  height: auto;
+  line-height: normal;
+  border-bottom: 1px solid #bbb;
+}
+ul.primary li {
+  display: inline;
+}
+ul.primary li a {
+  background-color: #ddd;
+  border-color: #bbb;
+  border-width: 1px;
+  border-style: solid solid none solid;
+  height: auto;
+  margin-right: 0.5em;
+  padding: 0 1em;
+  text-decoration: none;
+}
+ul.primary li.active a {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: #fff 1px solid;
+}
+ul.primary li a:hover {
+  background-color: #eee;
+  border-color: #ccc;
+  border-bottom-color: #eee;
+}
+ul.secondary {
+  border-bottom: 1px solid #bbb;
+  padding: 0.5em 1em;
+  margin: 5px;
+}
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #ccc;
+}
+ul.secondary a {
+  padding: 0;
+  text-decoration: none;
+}
+ul.secondary a.active {
+  border-bottom: 4px solid #999;
+}
+
+/*
+** Autocomplete styles
+*/
+/* Suggestion list */
+
+/* removed */
+
+/* Animated throbber */
+
+/* removed */
+
+/*
+** Collapsing fieldsets
+*/
+
+/* removed */
+
+/*
+** Progressbar styles
+*/
+
+/* removed */
+
+/*
+** Formatting for welcome page
+*/
+#first-time strong {
+  display: block;
+  padding: 1.5em 0 .5em;
+}
+
+/*
+** To be used with tableselect.js
+*/
+tr.selected td {
+  background: #ffc;
+}
+
+/* $Id: user.css,v 1.4 2006/12/30 07:45:31 dries Exp $ */
+
+/* removed */
+
+/**
+ * Garland, for Drupal 5.0
+ * Stefan Nagtegaal, iStyledThis [dot] nl
+ * Steven Wittens, acko [dot] net`
+ *
+ * If you use a customized color scheme, you must regenerate it after
+ * modifying this file.
+ */
+
+/**
+ * Generic elements
+ */
+
+a:link, a:visited {
+  color: #0b5e93;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #074a74;
+  text-decoration: underline;
+}
+
+a:active, a.active {
+  color: #648194;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background: #5aabf1;
+}
+
+table {
+  margin: 1em 0;
+  width: 100%;
+}
+
+thead th {
+  border-bottom: 2px solid #d6ecfe;
+  color: #903e09;
+  font-weight: bold;
+}
+
+th a:link, th a:visited {
+  color: #7a8b98;
+}
+
+td, th {
+  padding: .3em .5em;
+}
+
+tr.even, tr.odd, tbody th {
+  border: solid #d6ecfe;
+  border-width: 1px 0;
+}
+
+tr.odd, tr.info {
+  background-color: #eef7fe;
+}
+
+tr.even {
+  background-color: #ffffff;
+}
+
+tr.odd td.active {
+  background-color: #dff0fd;
+}
+
+tr.even td.active {
+  background-color: #e7f4fd;
+}
+
+td.region, td.module, td.container {
+  border-top: 1.5em solid #ffffff;
+  border-bottom: 1px solid #bcdfff;
+  background-color: #d6ecfd;
+  color: #180da4;
+  font-weight: bold;
+}
+
+tr:first-child td.region, tr:first-child td.module, tr:first-child td.container {
+  border-top-width: 0;
+}
+
+.messages ul {
+  margin: 0;
+}
+
+.form-checkboxes, .form-radios, .form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0.25em 0;
+}
+
+.form-button, .form-submit {
+  margin: 2em 0.5em 1em 0;
+}
+
+.box {
+  margin-bottom: 2.5em;
+}
+
+/**
+ * Layout
+ */
+
+/* With 3 columns, require a minimum width of 1000px to ensure there is enough horizontal space. */
+body.sidebars {
+  min-width: 980px;
+}
+/* With 2 columsn, require a minimum width of 800px. */
+body.sidebar-left, body.sidebar-right {
+  min-width: 780px;
+}
+
+/* We must define 100% width to avoid the body being too narrow for near-empty pages */
+#wrapper #container #center {
+  float: left;
+  width: 100%;
+}
+
+/* So we move the #center container over the sidebars to compensate */
+body.sidebar-left #center {
+  margin-left: -210px;
+}
+body.sidebar-right #center {
+  margin-right: -210px;
+}
+body.sidebars #center {
+  margin: 0 -210px;
+}
+
+/* And add blanks left and right for the sidebars to fill */
+body.sidebar-left #squeeze {
+  margin-left: 210px;
+}
+body.sidebar-right #squeeze {
+  margin-right: 210px;
+}
+body.sidebars #squeeze {
+  margin: 0 210px;
+}
+
+/* We ensure the sidebars are still clickable using z-index */
+#wrapper #container .sidebar {
+  margin: 60px 0 5em;
+  width: 210px;
+  float: left;
+  z-index: 2;
+  position: relative;
+}
+
+#wrapper #container .sidebar .block {
+  margin: 0 0 1.5em 0;
+}
+
+#sidebar-left .block {
+  padding: 0 15px 0 0px;
+}
+
+#sidebar-right .block {
+  padding: 0 0px 0 15px;
+}
+
+.block .content {
+  margin: 0.5em 0;
+}
+
+#sidebar-left .block-region {
+  margin: 0 15px 0 0px;
+}
+
+#sidebar-right .block-region {
+  margin: 0 0px 0 15px;
+}
+
+.block-region {
+  padding: 1em;
+  background: transparent;
+  border: 2px dashed #bcdfff;
+  text-align: center;
+/*  font-size: 1.3em;*/
+}
+
+/* Now we add the backgrounds for the main content shading */
+#wrapper #container #center #squeeze {
+  background: #ffffff url(/files/color/garland/bg-content.png) repeat-x 50% 0;
+  position: relative;
+}
+
+#wrapper #container #center .right-corner {
+  background: transparent url(/files/color/garland/bg-content-right.png) no-repeat 100% 0;
+  position: relative;
+  left: 10px;
+}
+
+#wrapper #container #center .right-corner .left-corner {
+  padding: 60px 25px 5em 35px;
+  background: transparent url(/files/color/garland/bg-content-left.png) no-repeat 0 0;
+  margin-left: -10px;
+  position: relative;
+  left: -10px;
+  min-height: 400px;
+}
+
+#wrapper #container #footer, #footer {
+  float: none;
+  clear: both;
+  text-align: center;
+  margin: 4em 0 -3em;
+  color: #b7815f;
+}
+
+#wrapper #container .breadcrumb {
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  z-index: 3;
+}
+
+body.sidebar-left  #footer {
+  margin-left: -210px;
+}
+
+body.sidebar-right #footer {
+  margin-right: -210px;
+}
+
+body.sidebars #footer {
+  margin: 0 -210px;
+}
+
+/**
+ * Header
+ */
+
+#mission {
+/*  padding: 1em;*/
+/*  background-color: #ffffff;*/
+  border: 1px solid #e6e9fe;
+  margin-bottom: 2em;
+}
+
+/**
+ * Primary navigation
+ */
+ul.primary-links {
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  z-index: 4;
+}
+
+ul.primary-links li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  background-image: none;
+}
+
+ul.primary-links li a, ul.primary-links li a:link, ul.primary-links li a:visited {
+  display: block;
+  margin: 0 1em;
+  padding: .75em 0 0;
+  color: #aaaaaa;
+  background: transparent url(/files/color/garland/bg-navigation-item.png) no-repeat 50% 0;
+}
+
+ul.primary-links li a:hover, ul.primary-links li a.active {
+  color: #aaaaaa;
+  background: transparent url(/files/color/garland/bg-navigation-item-hover.png) no-repeat 50% 0;
+}
+
+/**
+ * Secondary navigation
+ */
+ul.secondary-links {
+  margin: 0;
+  padding: 18px 0 0;
+  float: right;
+  clear: right;
+  position: relative;
+  z-index: 4;
+}
+
+ul.secondary-links li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  background-image: none;
+}
+
+ul.secondary-links li a, ul.secondary-links li a:link, ul.secondary-links li a:visited {
+  display: block;
+  margin: 0 1em;
+  padding: .75em 0 0;
+  color: #cfdde6;
+  background: transparent;
+}
+
+ul.secondary-links li a:hover, ul.secondary-links li a.active {
+  color: #cfdde6;
+  background: transparent;
+}
+
+/**
+ * Local tasks
+ */
+ul.primary, ul.primary li, ul.secondary, ul.secondary li {
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tabs-wrapper {
+  margin: 0 -26px 1em;
+  padding: 0 26px;
+  border-bottom: 1px solid #e9f2fa;
+  position: relative;
+}
+ul.primary {
+  padding: 0.5em 0 10px;
+  float: left;
+}
+ul.secondary {
+  clear: both;
+  text-align: left;
+  border-bottom: 1px solid #e9f2fa;
+  margin: -0.2em -26px 1em;
+  padding: 0 26px 0.6em;
+}
+h2.with-tabs {
+  float: left;
+  margin: 0 2em 0 0;
+  padding: 0;
+}
+
+ul.primary li a, ul.primary li.active a, ul.primary li a:hover, ul.primary li a:visited,
+ul.secondary li a, ul.secondary li.active a, ul.secondary li a:hover, ul.secondary li a:visited {
+  border: 0;
+  background: transparent;
+  padding: 4px 1em;
+  margin: 0 0 0 1px;
+  height: auto;
+  text-decoration: none;
+  position: relative;
+  top: -1px;
+}
+ul.primary li.active a, ul.primary li.active a:link, ul.primary li.active a:visited, ul.primary li a:hover,
+ul.secondary li.active a, ul.secondary li.active a:link, ul.secondary li.active a:visited, ul.secondary li a:hover {
+  background: url(/files/color/garland/bg-tab.png) repeat-x 0 50%;
+  color: #aaaaaa;
+}
+ul.primary li.active a,
+ul.secondary li.active a {
+  font-weight: bold;
+}
+
+/**
+ * Nodes & comments
+ */
+.node {
+  border-bottom: 1px solid #e9f2fa;
+  /* margin: -1.5em -26px 1.5em; */
+  padding: 1.5em 26px;
+  border: 1px double gray;
+  border-radius: 10px 10px 10px 10px;
+  border-right-width: 0px;
+  box-shadow: 0px 10px 10px gray;
+  margin: 0px -26px 1.5em;
+}
+
+ul.links li, ul.inline li {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 1em;
+  background-image: none;
+}
+
+.node .links, .comment .links {
+  text-align: left;
+}
+
+.node .links ul.links li, .comment .links ul.links li {}
+.terms ul.links li {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 1em;
+}
+
+.picture, .comment .submitted {
+  float: right;
+  clear: right;
+  padding-left: 1em;
+}
+
+.submitted, .submitted a {
+  text-align: right;
+  color: gray;
+  font-size: small;
+  border: none;
+}
+
+.new {
+  color: #ecff02;
+  font-size: 0.92em;
+  font-weight: bold;
+  float: right;
+}
+
+.terms {
+  float: right;
+}
+
+.preview .node, .preview .comment, .sticky {
+  margin: 0;
+  padding: 0.5em 0;
+  border: 0;
+  background: 0;
+}
+
+.sticky {
+  padding: 1em;
+  background-color: #ffffff;
+  border: 1px solid #e6e9fe;
+  margin-bottom: 2em;
+}
+
+
+
+.indented {
+  margin-left: 25px;
+}
+
+.node .content, .comment .content {
+  margin: 0.6em 0;
+}
+
+/**
+ * Poll.module
+ */
+.poll .bar {
+  background: #ffffff url(/files/color/garland/bg-bar-white.png) repeat-x 0 0;
+  border: solid #f7efee;
+  border-width: 0 1px 1px;
+}
+
+.poll .bar .foreground {
+  background: #78baf3 url(/files/color/garland/bg-bar.png) repeat-x 0 100%;
+}
+
+.poll .percent {
+  font-size: .9em;
+}
+
+/**
+ * Collapsible fieldsets
+ */
+fieldset {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #dbeefe;
+  background: #ffffff url(/files/color/garland/gradient-inner.png) repeat-x 0 0;
+}
+
+/* Targets IE 7. Fixes background image in field sets. */
+*:first-child+html fieldset {
+  padding: 0 1em 1em;
+  background-position: 0 .75em;
+  background-color: transparent;
+}
+
+*:first-child+html fieldset > .description, *:first-child+html fieldset .fieldset-wrapper .description {
+  padding-top: 1em;
+}
+
+fieldset legend {
+  /* Fix disappearing legend in FFox */
+  display: block;
+}
+
+*:first-child+html fieldset legend, *:first-child+html fieldset.collapsed legend {
+  display: inline;
+}
+
+html.js fieldset.collapsed {
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: .6em;
+}
+
+html.js fieldset.collapsible legend a {
+  padding-left: 2em;
+  background: url(/files/color/garland/menu-expanded.gif) no-repeat 0% 50%;
+}
+
+html.js fieldset.collapsed legend a {
+  background: url(/files/color/garland/menu-collapsed.gif) no-repeat 0% 50%;
+}
+
+/**
+ * Syndication icons and block
+ */
+#block-node-0 h2 {
+  float: left;
+  padding-right: 20px;
+}
+
+#block-node-0 img, .feed-icon {
+  float: right;
+  padding-top: 4px;
+}
+
+#block-node-0 .content {
+  clear: right;
+}
+
+/**
+ * Login Block
+ */
+#user-login-form {
+  text-align: center;
+}
+#user-login-form ul {
+  text-align: left;
+}
+
+/**
+ * CSS support
+ */
+span.clear {
+  display: block;
+  clear: both;
+  height: 1px;
+  line-height: 0px;
+  font-size: 0px;
+  margin-bottom: -1px;
+}
+
+/*******************************************************************
+ *                                        *
+ *******************************************************************/
+
+/**
+ * Generic elements.
+ */
+.messages {
+  background-color: #fff;
+  border: 1px solid #b8d3e5;
+}
+
+.preview {
+  background-color: #fcfce8;
+  border: 1px solid #e5e58f;
+}
+
+div.status {
+  color: #3a3;
+  border-color: #c7f2c8;
+}
+
+div.error {
+  color: #c52020;
+}
+
+.form-item input.error, .form-item textarea.error {
+  border: 1px solid #c52020;
+  color: #494949;
+}
+
+/**
+ * Alle Links unter Beiträgen außer "weiterlesen" grau machen.
+ */
+
+.terms a {color: #999;}
+.comment_add a {color: #999;}
+.blog_usernames_blog a {color: #999;}
+.subscriptions_del_blog a {color: #999;}
+.subscriptions_del_node a {color: #999;}
+.book_printer a {color: #999;}
+
+
+/**
+ * Stilelemente für Strukturen für's EWS.
+ */
+
+.raumzeit_einleitungszitat {
+  text-align: left;
+  font-style: italic;
+  font-size: 90%;
+}
+
+.raumzeit_einleitungszitat_autor {
+  text-align: right;
+}
+
+#flaggen {
+    position: absolute;	
+	right: 0px;
+	top: 0px;
+    z-index: 2; /* show in front of the main text on hover for small screens */
+}
+
+#flagge_de, #flagge_eo, #flagge_en {
+    /* add padding right, so it’s clickable but does not seem too close.*/
+	position: absolute;
+	right: 0px;
+	width: 33px;
+	background-position: 0px;
+	background-repeat: none;
+}
+
+#flagge_de {
+	top: 0px;
+	height: 20px;
+	background: url(/bilder/deutsche-flagge-public-domain-wikipedia-blass.png);
+}
+#flagge_eo {
+	top: 20px;
+	height: 23px;
+	background: url(/bilder/esperanta-blass.png);
+}
+#flagge_en {
+	top: 43px;
+	height: 17px;
+	background: url(/bilder/vereinigtes-koenigreich-flagge-public-domain-wikipedia-blass.png);
+}
+
+#flagge_en:hover {
+	background: url(/bilder/vereinigtes-koenigreich-flagge-public-domain-wikipedia.png);
+}
+#flagge_eo:hover {
+	background: url(/bilder/esperanta.png);
+}
+#flagge_de:hover {
+	background: url(/bilder/deutsche-flagge-public-domain-wikipedia.png);
+}
+
+#ews_zitat {
+    position: absolute;
+    top: 11em;
+    right: 2em;
+    width: 13em;
+    padding: 0.5em;
+    text-align: justify;
+    border-style: dashed;
+    border-width: thin;
+    border-color: gray;
+}
+
+#ews_zitat:hover {
+    z-index: 2; /* show in front of the main text on hover for small screens */
+    background-color: white; /* to make it readable over text. */
+}
+
+#ews_zitat li {
+  margin-left: -0.0em;
+}
+
+
+/*h1, h2, h3, h4, h5, h6 .header {
+    font-family: GoudyStMM;
+}*/
+
+a.node_read_more {
+    font-weight: bold;
+}
+
+/*.page-up:before {
+    content: " | "
+}
+.page-up:after {
+    content: " | "
+}*/
+a.node_read_more:before {
+    content: " → ";
+}
+a.node_read_more:after {
+    content: " ← ";
+}
+
+/* babcode: for starters add all the stuff from stevelosh.com */
+
+ 
+.bugnumbers {
+    font-size: x-small;
+    vertical-align: super;
+}
+.openbugnumber, .openbugnumber a {
+    color: #f00;
+    text-decoration: none;
+}
+.resolvedbugnumber, .resolvedbugnumber a {
+    color: #00f;
+    text-decoration: none;
+}
+/* Copyright (c) 2008-2010 Steve Losh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,header,nav,section,article,aside,footer{
+    border:0;margin:0;outline:0;padding:0;background:transparent;vertical-align:baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+q{
+    quotes:none;
+}
+blockquote {
+  quotes: '“' '”';
+  min-height: 3em;}
+blockquote p:first-child:before {
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;}
+blockquote p:after {content: no-close-quote;}
+blockquote p:last-child:after {content: close-quote;}
+q:before,q:after{
+    content:none;
+}
+header,nav,section,article,aside,footer{
+    display:block;
+}
+html{
+    overflow-y:scroll;
+}
+body{
+background:#fdfdfd;
+color:#353535;
+  text-rendering:optimizeLegibility;
+  font-family: Georgia,Cambria,"Times New Roman",Times,Palatino,"Palatino Linotype",serif;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.7;
+}
+}
+html>body{
+    font-size:18px;line-height:25px;
+}
+img{
+    display:inline-block;vertical-align:bottom;
+}
+h1,h2,h3,h4,h5,h6,strong,b,dt,th{
+    font-weight:700;
+}
+address,cite,em,i,caption,dfn,var{
+    font-style:italic;
+}
+h1{
+    font-size:45px;line-height:50px;margin:25px 0;
+}
+h2{
+    font-size:32px;line-height:50px;margin:25px 0;
+}
+h3{
+    font-size:23px;line-height:25px;margin:25px 0;
+}
+h4{
+    margin:0 0 22px;font-size:16px;line-height:22px;
+}
+h5{
+    margin:0 0 22px;font-size:14px;line-height:22px;
+}
+h6{
+    margin:0 0 22px;font-size:12px;line-height:22px;
+}
+p,ul,ol,dl,blockquote,pre{
+    margin:0 0 25px;
+}
+li ul,li ol{
+    margin:0;
+}
+ul{
+    list-style:outside disc;
+}
+ol{
+    list-style:outside decimal;
+}
+li{
+    margin:0 0 0 44px;
+}
+dd{
+    padding-left:25px;
+}
+blockquote{
+    padding:0 25px;
+}
+a{
+    text-decoration:underline;
+}
+a:hover{
+    text-decoration:none;
+}
+abbr,acronym{
+    border-bottom:1px dotted;cursor:help;
+}
+del{
+    text-decoration:line-through;
+}
+ins{
+    text-decoration:overline;
+}
+sub{
+    font-size:14px;line-height:25px;vertical-align:sub;
+}
+sup{
+    font-size:14px;line-height:25px;vertical-align:super;
+}
+tt,code,kbd,samp,pre{
+    font-size:18px;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+table{
+    border-collapse:collapse;border-spacing:0;margin:0 0 1.5em;
+}
+caption{
+    text-align:left;
+}
+th,td{
+    padding:.25em .5em;
+}
+tbody td,tbody th{
+    border:1px solid #222;
+}
+tfoot{
+    font-style:italic;
+}
+fieldset{
+    clear:both;
+}
+legend{
+    padding:0 0 1.286em;font-size:1.167em;font-weight:700;
+}
+fieldset fieldset legend{
+    padding:0 0 1.5em;font-size:1em;
+}
+* html legend{
+    margin-left:-7px;
+}
+*+html legend{
+    margin-left:-7px;
+}
+form .field,form .buttons{
+    clear:both;margin:0 0 1.5em;
+}
+form .field label{
+    display:block;
+}
+form ul.fields li{
+    list-style-type:none;margin:0;
+}
+form ul.inline li,form ul.inline label{
+    display:inline;
+}
+form ul.inline li{
+    padding:0 .75em 0 0;
+}
+input.radio,input.checkbox{
+    vertical-align:top;
+}
+label,button,input.submit,input.image{
+    cursor:pointer;
+}
+* html input.radio,* html input.checkbox{
+    vertical-align:middle;
+}
+*+html input.radio,*+html input.checkbox{
+    vertical-align:middle;
+}
+textarea{
+    overflow:auto;
+}
+input.text,input.password,textarea,select{
+    margin:0;font:1em/1.3 Helvetica,Arial,"Liberation Sans","Bitstream Vera Sans",sans-serif;vertical-align:baseline;
+}
+input.text,input.password,textarea{
+    border:1px solid #444;border-bottom-color:#666;border-right-color:#666;padding:2px;
+}
+* html button{
+    margin:0 .34em 0 0;
+}
+*+html button{
+    margin:0 .34em 0 0;
+}
+form.horizontal .field{
+    padding-left:150px;
+}
+form.horizontal .field label{
+    display:inline;float:left;width:140px;margin-left:-150px;
+}
+img.left{
+    display:inline;float:left;margin:0 1.5em .75em 0;
+}
+img.right{
+    display:inline;float:right;margin:0 0 .75em .75em;
+}
+.group:after{
+    content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+
+html{
+    overflow-y:scroll;
+}
+body{
+    text-rendering:optimizeLegibility;color:#222222;position:relative;
+}
+body a{
+    text-decoration:none;color:#e50053;
+}
+body a:hover{
+    text-decoration:underline;
+}
+body h1,body h2,body h3,body h4,body h5,body h6{
+    font-family:'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;font-weight:normal;
+}
+body h1 a,body h2 a,body h3 a,body h4 a,body h5 a,body h6 a{
+    color:#222222;
+}
+body h1 a:hover,body h2 a:hover,body h3 a:hover,body h4 a:hover,body h5 a:hover,body h6 a:hover{
+    color:#e50053;text-decoration:none;
+}
+body h1 .amp,body h2 .amp,body h3 .amp,body h4 .amp,body h5 .amp,body h6 .amp{
+    font-style:italic;
+}
+body h1{
+    font-size:45px;line-height:50px;margin:25px 0;
+}
+body h2{
+    font-size:32px;line-height:50px;margin:25px 0;
+}
+body h3{
+    font-size:23px;line-height:25px;margin:25px 0;
+}
+body h4{
+    font-size:18px;line-height:25px;margin:25px 0;
+}
+body code,body pre{
+    font-family:Consolas,Menlo,"Courier New",monospace;font-size:18px;
+}
+body .codehilite code,body .codehilite pre{
+    font-family:Consolas,Menlo,"Courier New",monospace;font-size:18px;line-height:25px;overflow-x:auto;border:1px solid #d5d5d5;border-left:10px solid #d5d5d5;background-color:#fafafa;padding:11px 15px 12px;margin-left:-25px;
+}
+body .codehilite pre::-webkit-scrollbar{
+    height:25px;
+}
+body .codehilite pre::-webkit-scrollbar-button:start,body .codehilite pre::-webkit-scrollbar-button:end{
+    display:none;
+}
+body .codehilite pre::-webkit-scrollbar-track-piece{
+    background-color:#eee;
+}
+body .codehilite pre::-webkit-scrollbar-thumb{
+    background-color:#bbb;border:7px solid #eee;-webkit-background-clip:padding-box;-webkit-border-radius:12px;
+}
+body p code,body li code,body table code{
+    border:1px solid #ccc;background-color:#fafafa;font-size:13px;padding:1px 3px;line-height:20px;margin:0;white-space:nowrap;
+}
+body .wrap{
+    width:612px;margin:0 auto;margin-bottom:5em;
+}
+body .wrap .top header{
+    float:left;font-family:'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;font-size:23px;line-height:50px;text-transform:lowercase;padding-left:2px;width:210px;
+}
+body .wrap .top.fullwidth header{
+    float:left;font-family:'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;font-size:23px;line-height:50px;text-transform:lowercase;padding-left:2px;width:610px;
+}
+body .wrap .top header .amp{
+    font-style:italic;
+}
+body .wrap .top header a{
+    color:#222222;
+}
+body .wrap .top header a:hover{
+    color:#e50053;
+}
+body .wrap .top nav{
+    /* reduced font size and/or line height compared to steve losh (18px/50px), 
+    because we can have a long lis tof forks and use <sup> elements for the bugs.*/
+    font:normal 18px/35px 'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;text-align:right;text-transform:lowercase;padding-right:2px;width:398px;float:left;
+}
+body .wrap .top nav#forknav{
+    font:normal 18px/50px 'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;text-align:right;text-transform:lowercase;padding-right:2px;width:398px;float:left;
+}
+body .wrap .top nav .sep{
+    padding:0 4px;color:#666;
+}
+body .hr{
+    margin-top:-12px;height:25px;background:transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmQAAAAZCAIAAAAQUKXdAAADAklEQVR42u3c3UtTcRzHcf+nIOquu266TIICsceLLpKISKPQqOxGgkgjioouyrIUzbJI0xKV0CwpdW7HTQ+6ubNH3dzc3JQ+emSu0a1u4PvlkMnYLg7i2+/5/c4pWwNKW1ZfAFBUZRwClLi2n4+i8VAmk+FQACCWwP/Gymy2oacqGgun02k954AAIJZAIQ2UN7tOxePxZDLJcAmAWAKFGnouDLt7nwzULy0tKZZMlgCIJVDofMuhM80Hfhj9iuXKygqxBEAsgbX19fXcc6XxRlflpdYjVsBSLLVmyfEBQCyx1zNpUyW/ONqcC2OqY1Pf1ebvjcFgUGuWLFgCIJaglHYp14amP518se/sq4OGd+Lht1rX3MTi4mIqleIcLABiCWK5Fcs3ow8USz1qOyvudl+MRCLLy8urq6scJQDEEpRyK5ZPh+rtWOrx+VdrOBxmaw+A4sdSC0IOYFdMbXI6nS6XyzAMt9s9Ozs7Pz/vtyxFUQuTiUTi9XCjXcq6d5V61efzBQIBv9/v9XpN0/R4PHqj3q4PsT+NowpgpymUTJYorcmyc+y5Snn65f6RyUFlUvm0x8r8jbIAsNuTpRaE/MCusSw9RCHUP2saKKPRaCwWUxS1i0c7YFtGmhTLx19va+LUq/r91EsaOrXNRz+GQiG90dr8kI0HAOw8/SFiskTxJ0t9T2dS0URIQ+SzwTtVbw/PzLnzVytzcycAFGey5BCgBGKZvf7+hG7W88ccruko7/7dpgkytwk2/yQtABBL7FHB2IK9qUcz5a2ucyqlfW1lrqaUEgCxxF7nCUzZsaxpP2aYTp2A1TqlfcsexkoAxBLYMGB8VCmr28sd7nFt3tF2Hk7AAiCWwDZt4bnfd6W646jLdGiDa/4908kkAGIJbJj2j1/rPD7jM3QliUrJbWABEEvgH5O+0boPFXMBj321JaUEQCyBbeG4pdvA3uu97I/4NFDqQhGdfaWUAIglsG3U7B/x9GnXq337HkoJgFgChXRliE66JpNJ3aaHUgIocX8BBfw+1JXTYZkAAAAASUVORK5CYII=')/*../images/hr.png*/ top left no-repeat;
+}
+body .hrb{
+    height:25px;margin-top:50px;background:transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmQAAAAZCAIAAAAQUKXdAAADMklEQVR42u3c30tTcRjHcf+nIOquu266TIICsZ8XXSQRkUahUdmNBGFGFBVdlGI1NMsiTUtUSjOk1LUfOqZsnrOfujnd3Mw+eiDn8iZwY2Pvl2NseLaLhwc/Pud8z7diDQCQJaMfYLsKSgAA2WzfH0TjoXQ6TSlAWALATmNlJtPUWxONhVOplF5TEBCWAJBLA+X17hPxeHx5eZnhEoQlAORq6j03Mt33aLBxcXFRYclkCcISAHKdbT9wqnXfN9eAwnJlZYWwBGGJYvR7J5QFeW25v68Vjde6qy+8OmQGTIWlrllSHxCWKIGYJC9RgK5TSn602xzz40rHlv7LrV/uBoNBXbPkgiUIS5RSUpKXyGdSrg273x9/tud0236Xb/L+53rn3OTCwkIymeQcLAhLlF5YkpfIR8vp9YuxewpLPeq7qm73nI9EIktLS6urq1QJhCWKNynXsxCWKEBYPh5utMJSjw/jtnA4zNIe7BCWOjtvBwri1yaHw+F0OqkGCt91brfb4/HMzs76/f5QKKRVPBoi2742W0nZ8Lra6/UahqG/ioFAQMfoSB2vT+mz+gbrqyhpGVJLMFmiiCbL9X8wWSKvLae3XeNPlZQnn+8dnRpSRiYSCWuspOuwbbLUP1YGUDCmqYdQCRS+6zQfaKDUVUlrptS2A1oB2z7aorB8+Ommz+fTrxKb9Fsdo7c6Xp8yN7/BoG/LlfqByRJMlii7ltNzKp2MJjZ2S38ydKvm5UHP3HT21Uq6DrmTJSVA8YQlC3xQKJmrb45ps56f3pG6zsqeHzZNkJoerHsraTkQliiBvOS+EeRbMDZvLerRTHmj+4yS0rq3MqchKRQISxCWKF8zpt0Ky7qOIy6vQydgdZ2SsRKEJUo7L6kPdteg652Ssraj0j49ocU72tzO2oWAlgNhiZKMTGqCXaclPM39l2o7Dzu9di1wzd4zna4DYQkAG9zGxJWuox6/S/eEKCnZBhaEJQBsM+Ufa3hbNReYiUajsViMpARhCQBbwnFT28De6btoRPzWpgQ6+0pSgrAEgC1j3oHRmX6tetVAqWeSEoQlAOTSnSE66aot7rRND0mJ//UHiLRAti+ZCq0AAAAASUVORK5CYII=')/*../images/hrb.png*/ top left no-repeat;
+}
+body .wrap footer{
+    text-align:center;
+}
+body .wrap footer p{
+    font-size:14px;font-style:italic;line-height:50px;margin-bottom:0px;
+}
+body .wrap footer .rochester-made img{
+    opacity:0.7;padding:5px 20px;
+}
+hr{
+    border:none;background:#ccc;height:1px;margin-bottom:24px;
+}
+.splash{
+    color:#454545;text-align:center;font:normal 27px/32px 'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;margin-bottom:-1px;padding-top:0;
+}
+.splash p{
+    margin-bottom:24px;
+}
+.splash .amp{
+    font-style:italic;
+}
+.splash .fn{
+    color:#454545;text-decoration:none;
+}
+.splash .fn:hover{
+    color:#e50053;text-decoration:none;
+}
+.splash .fn .last-name{
+    display:none;
+}
+.section-listing{
+    margin-bottom:-50px;
+}
+.section-listing ol{
+    list-style-type:none;
+}
+.section-listing ol li{
+    float:left;width:281px;height:150px;margin:0;text-align:center;
+}
+.section-listing ol li a{
+    font:normal 23px/32px 'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;color:#222222;display:block;
+}
+.section-listing ol li a:hover{
+    color:#e50053;text-decoration:none;
+}
+.section-listing ol li span.snip{
+    font-size:18px;color:#333;font-family:'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;line-height:25px;font-style:italic;
+}
+.section-listing ol li .amp{
+    font-style:italic;
+}
+.section-listing ol li:nth-child(odd){
+    margin-right:25px;
+}
+.section-listing ol li:nth-child(even){
+    margin-left:25px;
+}
+blockquote{
+    border:1px solid #ccc;background-color:#fafafa;padding:11px 15px 12px;margin-left:2em;overflow:auto;
+}
+blockquote p:last-child{
+    margin-bottom:0;
+}
+span.dquo{
+    margin-left:-0.23em;
+}
+#leaf-stats p{
+    color:#666;margin-top:-22px;margin-bottom:22px;
+}
+#leaf-content img{
+    display:block;margin:25px auto 26px;border:11px solid #e5e5e5;padding:1px;background:black;max-width:590px;
+}
+#leaf-content img.left,#leaf-content img.right{
+    border:none;background:none;padding:none;
+}
+#leaf-content img.left{
+    margin:0 1.5em 1em 0;
+}
+#leaf-content img.right{
+    margin:0 0 .75em 1em;
+}
+#leaf-content .gallery img{
+    background:none;padding:0;border:none;display:inline;margin-bottom:25px;margin-right:25px;
+}
+#leaf-content .toc ul{
+    list-style:none;
+}
+#leaf-content .toc ul:first-child>li{
+    margin-left:0em;
+}
+#leaf-content table{
+    padding:0px;margin-top:-8px;margin-bottom:25px;
+}
+#leaf-content table tr{
+    margin:0px;padding:0px;
+}
+#leaf-content table tr td,#leaf-content table tr th{
+    margin:0px;padding:5px 5px;line-height:23px;
+}
+#leaf-content table tr td{
+    border:1px solid #666;
+}
+#leaf-content.with-diagrams img{
+    display:block;margin:25px auto;padding:0;background:none;border:none;
+}
+.print-links{
+    display:none;
+}
+img.self{
+    border:none;padding:0;margin:0;margin-right:-108px;margin-top:-15px;margin-left:30px;margin-bottom:20px;
+}
+div#cboxCurrent{
+    bottom:-30px;font-size:17px;font-weight:normal;left:60px;
+}
+div.screenshots img{
+    max-width:580px;
+}
+#scrolling-header{
+    color:#999;font-size:23px;font-style:italic;font:italic 23px 'OFL Sorts Mill Goudy','OFL Sorts Mill Goudy TT',serif;line-height:30px;position:fixed;top:75px;text-align:right;width:180px;
+}
+.flattr{
+    float:right;padding-top:1px;
+}
+#shortlog a, #branches a, #tags a, #bookmarks a, #incoming a, #outgoing a, #log a{
+    text-decoration:none;color:gray;
+}
+#shortlog a:hover, #branches a:hover, #tags a:hover, #bookmarks a:hover, #incoming a:hover, #outgoing a:hover, #log a{
+    text-decoration:underline;
+}
+#intro{
+    color:#353535;font:normal 23px/25px Palatino,"Palatino Linotype",serif;text-rendering:optimizeLegibility;font-style:italic;padding-left:50px;padding-right:50px;padding-bottom:20px;padding-top:15px;/*background:#eeeeee;border:solid thin lightgray;border-radius:25px;*/
+}
+#introtoreadmelink{
+    color: lightgray;
+}
+#readme>pre{
+    background:#fdfdfd;color:#353535;font:normal 18px/25px Palatino,"Palatino Linotype",serif;text-rendering:optimizeLegibility;
+/*font-family:Consolas,Menlo,"Courier New",monospace;*/
+}
+
+.willkommen {
+    font-size:large;
+    font-variant: small-caps;
+    color: #c40;
+   padding-bottom: 1em;
+}
+
+
+/** 
+ * Book navigation.
+ */
+
+
+.book-navigation .menu {
+  border-top: 1px solid #888;
+  padding: 1em 0 0 3em;
+}
+.book-navigation .page-links {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  text-align: center;
+  padding: 0.5em;
+}
+.book-navigation .page-previous {
+  text-align: left;
+  width: 42%;
+  display: block;
+  float: left; /* LTR */
+}
+.book-navigation .page-up {
+  margin: 0 5%;
+  width: 4%;
+  display: block;
+  float: left; /* LTR */
+}
+.book-navigation .page-next {
+  text-align: right;
+  width: 42%;
+  display: block;
+  float: right;
+}
+#book-outline {
+  min-width: 56em;
+}
+.book-outline-form .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#edit-book-bid-wrapper .description {
+  clear: both;
+}
+#book-admin-edit select {
+  margin-right: 24px;
+}
+#book-admin-edit select.progress-disabled {
+  margin-right: 0;
+}
+#book-admin-edit tr.ahah-new-content {
+  background-color: #ffd;
+}
+#book-admin-edit .form-item {
+  float: left;
+}
+
+
+.verweise { 
+    width: 24%; padding: 3px; float:right; margin-left:10px; margin-bottom: 3px; border-style: none none none dashed; border-width: 0px 0px 0px thin; text-align: left; 
+}
+
+.sourcebox {
+    float: right; text-align: right; border: solid thin gray; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; margin-left: 1em
+}
+
+
+  -->
+    </style>
+
+    <!-- /babcode: Hand-aggregated css to get a faster startpage. -->
+
+    <!--[if lt IE 7]>
+        <style type="text/css" media="all">@import "/themes/garland/1w6-start/fix-ie.css";</style>
+        <![endif]-->
+  </head>
+  <body>
+
+    <!-- Layout -->
+  <div class="article">
+              <div class="section">
+
+                    <h1><a href="/node/250">Your browser history can be sniffed with just 64 lines of Python (tested with Firefox 3.5.3)</a></h1>                              <div class="hr"></div>
+                              <div class="breadcrumb"><a href="/">Startseite</a> › <a href="/light">Light</a> › <a href="/light/english">English</a> › <a href="/english/free-software">Free Software</a></div>          <div class="clear-block">
+            <div id="node-250" class="node">
+
+
+
+      <span class="submitted">Fr, 10/02/2009 - 10:53 — <a href="/uzanto/zwillingsstern" title="Benutzerprofil anzeigen.">Draketo</a></span>
+  
+  <div class="content clear-block">
+    <p>After the example of making-the-web, I was quite intrigued by the ease of sniffing the history via simple CSS tricks.</p>
+
+<div class="verweise">- <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=147777">Firefox Bug report</a> - finally resolved fixed.<br />
+- <a href="http://startpanic.com/">Start Panic!</a> - a site dedicated to spreading the news about the vulnerability.</div>
+
+<p>So I decided to test, how small I get a Python program which can sniff the history via CSS - without requiring any scripting ability on the browser-side.</p>
+
+<p>I first produced fully commented code (see <a href="http://bitbucket.org/ArneBab/babsniff_history_css/src/tip/server.py">server.py</a>) and then stripped it down to just 64 lines (<a href="http://bitbucket.org/ArneBab/babsniff_history_css/src/tip/server_stripped.py">server-stripped.py</a>), to make it really crystal clear, that making your browser vulnerable to this exploit is a <em>damn bad idea</em>. I hope this will help get Firefox fixed quickly.</p>
+
+<p><strong>If you see http://blubber.blau as found, you're safe</strong>. If you don't see any links as found, you're likely to be safe. In any other case, everyone in the web can grab your history - if given enough time (a few minutes) or enough iframes (which check your history in parallel). This doesn't use Javascript.</p>
+
+<iframe src="http://edrikor.dyndns.org:8765" width=500 height=500></iframe>
+
+<p>It currently only checks for the 1000 or so most visited websites and doesn't keep any logs in files (all info is in memory and wiped on every restart), since I don't really want to create a full fledged history ripper but rather show how easy it would be to create one.</p>
+
+<p>Besides: It does not need to be run in an iframe. Any Python-powered site could just run this test <em>as regular part of the site</em> while you browse it (and wonder why your browser has so much to do for a simple site, but since we’re already used to high load due to Javascript, who is going to care?). So don’t feel safe, just because there are no iframes. To feel <em>and be</em> safe, use one of the <a href="http://www.whattheinternetknowsaboutyou.com/docs/solutions.html">solutions from What the Internet knows about you</a>.</p>
+
+<p><strong>Konqueror seems to be immune</strong>: It also (pre-)loads the "visited"-images from not visited links, so every page is seen as visited - which is the only way to avoid spreading my history around on the web and still providing “visited” image-hints in the browser!</p>
+
+<p><strong>Firefox 4.0.1 seems to be immune, too</strong>: It does not show any :visited-images, so the server does not get any requests.</p>
+
+<p>So please don't let your browser load anything depending on the :visited state of a link tag! It shouldn't load anything based on internal information, because that always publicizes private information - and you don't know who will read it!</p>
+
+<p>In short: Don't keep repeating Ennesbys Mistake:</p>
+
+<ul>
+<li><p>Mistake: <a href="http://www.schlockmercenary.com/d/20071201.html"><img src="http://www.schlockmercenary.com/comics/schlock20071201.png" alt="http://www.schlockmercenary.com/d/20071201.html" /></a></p></li>
+<li><p>Effects: <a href="http://www.schlockmercenary.com/d/20071206.html"><img src="http://www.schlockmercenary.com/comics/schlock20071206.png" alt="http://www.schlockmercenary.com/d/20071206.html" /></a></p></li>
+</ul>
+
+<p><em>(comic strips not hosted here and not free licensed → copyright: <a href="http://www.schlockmercenary.com/schlock_author.html">Howard V. Tayler</a>)</em></p>
+
+<p>And to the Firefox developers: Please remove the optimization of only loading required css data based on the visited info! I already said so in a bug report, and since the bug isn't fixed, this is my way to put a bit of weight behind it. Please stop putting your users privacy at risk.</p>
+
+<p>Usage:</p>
+
+<ul>
+<li>python server.py<br />
+start the server at port 8000. You can now point your browser to http://127.0.0.1:8000 to get sniffed :)</li>
+</ul>
+
+<p>To get more info, just use <em>./server.py --help</em>.</p>
+  <div id="book-navigation-195" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="/light/english/free-software/write-programs-you-can-hack-while-you-feel-dumb" class="page-previous" title="vorherige Seite">‹ Write programs you can still hack when you feel dumb</a>
+                    <a href="/english/free-software" class="page-up" title="Gehe zur übergeordneten Seite">nach oben</a>
+                    <a href="/light/english/complex-numbers-compiler-libc-bugs-icc-osx-cexp-conj" class="page-next" title="nächste Seite">complex number compiler and libc bugs (cexp+conj) on OSX and with the intel compiler (icc) ›</a>
+          </div>
+    
+  </div>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+          <div class="terms"><ul class="links inline"><li class="taxonomy_term_51 first"><a href="/english/news" rel="tag" title="">English</a></li>
+<li class="taxonomy_term_262"><a href="/stichwort/firefox" rel="tag" title="">firefox</a></li>
+<li class="taxonomy_term_289"><a href="/stichwort/history" rel="tag" title="">History</a></li>
+<li class="taxonomy_term_54"><a href="/news/light" rel="tag" title="">Light</a></li>
+<li class="taxonomy_term_290 last"><a href="/stichwort/vulnerability" rel="tag" title="">Vulnerability</a></li>
+</ul></div>
+        </div>
+
+          <div class="links"><ul class="links inline"><li class="book_printer first"><a href="/print/book/export/html/250" title="Display a printer-friendly version of this page." class="print-page" rel="nofollow">Druckversion</a></li>
+<li class="comment_forbidden"><span><a href="/user/login?destination=comment%2Freply%2F250%23comment-form">Login</a> to post comments</span></li>
+<li class="book_mail last"><a href="/printmail/book/export/html/250" title="Send this page by email." class="print-mail" rel="nofollow">Send by email</a></li>
+</ul></div>
+      </div>
+    <!-- Babcom: Decentral Anonymous Spamresistant comments on Static Websites.
+
+    Copyright: 2014 Arne Babenhauserheide (http://draketo.de) You are free
+    to use this under any license you chose. If you want to be nice,
+    release your changes under free software licenses.  -->
+    <style type="text/css">
+    #babcom-realcomments, #babcom-publicsoneid iframe {
+      width: 100%;
+      height: 100px;
+      border: solid thin black;
+    }
+    #babcom-needsfreenet {
+      width: 100%;
+      height: 300px;
+      margin-bottom: -1em;
+      border: solid thin black;
+    }
+    #babcom-needsfreenet p, #babcom-needsfreenet blockquote {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    code.babcom-sitelink-code {
+      white-space: pre-wrap;
+    }
+}
+    </style>
+    <!-- TODO: Save the node in a cookie -->
+    <p><button type="button" onclick="loadcomments()">Reload Comments</button> Use Node: <input type="text" name="babcom-node" id="babcom-node" value="http://127.0.0.1:8888" /></p>
+    <div id="babcom-needsfreenet"><blockquote><strong>⚙ Babcom is trying to load the comments ⚙</strong></blockquote>
+    <p>This textbox will disappear when the comments have been loaded.</p>
+    <p>If the box below shows an error-page, you need to install <a href="http://freenetproject.org">Freenet</a> with the <a href="http://freesocial.draketo.de/sone_en.html">Sone-Plugin</a> or set the node-path to your freenet node and click the <tt>Reload Comments</tt> button (or return).</p>
+<p>If you see something like <code>Invalid key: java.net.MalformedURLException: There is no @ in that URI! (Sone/search.html)</code>, you need to setup <a href="http://freesocial.draketo.de/sone_en.html">Sone</a> and the <a href="http://freesocial.draketo.de/wot_en.html">Web of Trust</a></p></div>
+    <p id="babcom-comments"></p>
+    <p id="babcom-nojswarning">If you had Javascript enabled, you would see comments for this page instead of the Sone page of the sites author.</p>
+    <iframe id="babcom-publicsoneid" src="http://127.0.0.1:8888/Sone/viewSone.html?sone=6~ZDYdvAgMoUfG6M5Kwi7SQqyS-gTcyFeaNN1Pf3FvY"></iframe>
+        <p><em>Note: To make a comment which isn’t a reply visible to others here, include a link to this site somewhere in the text of your comment. It will then show up here. To ensure that I get notified of your comment, also include my Sone-ID.</em></p>
+    <p>Link to this site and my Sone ID: <code class="babcom-sitelink-code"><span id="babcom-sitelink"></span>  sone://6~ZDYdvAgMoUfG6M5Kwi7SQqyS-gTcyFeaNN1Pf3FvY</code></p>
+    <p>This spam-resistant comment-field is made with <a href="http://draketo.de/proj/freecom">babcom</a>.</p>
+    <script type="text/javascript">
+            /* @licstart The following is the entire license notice for
+            the JavaScript code within this script block (script
+            to /script).
+
+            Copyright (C) 2014  Arne Babenhauserheide
+
+            The JavaScript code in this page is free software: you can
+            redistribute it and/or modify it under the terms of the GNU
+            General Public License (GNU GPL) as published by the Free Software
+            Foundation, either version 3 of the License, or (at your option)
+            any later version.  The code is distributed WITHOUT ANY WARRANTY;
+            without even the implied warranty of MERCHANTABILITY or FITNESS
+            FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+            As additional permission under GNU GPL version 3 section 7, you
+            may distribute non-source (e.g., minimized or compacted) forms of
+            that code without the copy of the GNU GPL normally required by
+            section 4, provided you include this license notice and a URL
+            through which recipients can access the Corresponding Source.   
+
+            As additional permission under GNU GPL version 3 section 7,
+            you may use this code under any other free software license,
+            including permissive licenses like BSD and MIT.
+
+            @licend  The above is the entire license notice
+            for the JavaScript code  within these script block.
+            */
+    function loadcomments()
+    {
+    var freenetnode = document.getElementById("babcom-node").value
+    var sonesearch = "/Sone/search.html?query="
+    var host = "draketo.de";
+    var path = "/light/english/your-browser-history-can-be-sniffed-64-lines-python-tested-firefox-353";
+    var postsanchor = "post-results";
+    var searchquery = host + path + "#" + postsanchor;
+    var comments = document.getElementById("babcom-comments");
+    var publicsone = document.getElementById("babcom-publicsoneid");
+    var nojswarning = document.getElementById("babcom-nojswarning");
+    var needsfreenet = document.getElementById("babcom-needsfreenet");
+    var sitelink = document.getElementById("babcom-sitelink");
+    /* when the function gets rerun, replace the realcomments instead of adding.*/
+    if (document.getElementById("babcom-realcomments")) {
+        var cif = document.getElementById("babcom-realcomments");
+        cif.src = freenetnode + sonesearch + searchquery;
+    } else {
+        comments.innerHTML = "<iframe id=\"babcom-realcomments\" src=\"" + freenetnode + sonesearch + searchquery + "\"></iframe>";
+    }
+    nojswarning.parentNode.replaceChild(document.createElement("p"), nojswarning);
+    publicsone.parentNode.replaceChild(document.createElement("span"), publicsone);
+    sitelink.innerHTML = "http://" + host + path;
+    commentsiframe = document.getElementById("babcom-realcomments");
+    commentsiframe.onload = function(){
+            needsfreenet.parentNode.replaceChild(document.createElement("p"), needsfreenet);
+            commentsiframe.style.width = "100%";
+            commentsiframe.style.height = "400px";
+        }
+    }
+    loadcomments();
+    document.getElementById("babcom-node").onkeydown = function(e) {
+        var keyCode = e.keyCode || e.which;
+
+       if (keyCode === 13) {
+         loadcomments();
+       }
+    }
+    </script>
+
+</div>
+          </div>
+      <span class="clear"></span>
+      <a href="http://draketo.de/rss.xml" class="feed-icon"><img src="/misc/feed.png" alt="Inhalt abgleichen" title="Inhalt abgleichen" width="16" height="16" /></a>
+      <div id="footer">Werke von Arne Babenhauserheide. 
+Lizensiert unter der <a href="http://gnu.org/l/gpl">GPLv3 or later</a>
+und weiteren <a href="/lizenzen">freien Lizenzen</a>.
+
+<p>Diese Seite nutzt Cookies. Und Bilder. Manchmal auch Text. Eins davon muss ich wohl erwähnen — sagen die meisten anderen, und ich habe grade keine Zeit, Rechtstexte dazu zu lesen…</p>
+        <p>
+          <span style="float:right;" ><!--<img src="http://cgi.boingdragon.com/count/draketo/2.gif" width="114" height="35" alt="counter" title="A little dragon which counts our visitors" />-->
+            <img src="http://www.boingdragon.com:9080/BoingDragon/count//draketo/2.gif" width="114" height="35" alt="counter" title="A little dragon which counts our visitors" /><br />
+            <a href="http://validator.w3.org/check?uri=referer"><img
+                                                                   src="http://www.w3.org/Icons/valid-xhtml10"
+                                                                   alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a></span>
+        </p>
+      </div>
+    </div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+  </div> <!-- /container -->
+</div>
+</div>
+<!-- /layout -->
+
+
+    <div class="aside">
+<div style="float: left">
+        <a href="/"><img src="/themes/weltenwald/minnelli/logo.png" /></a>
+        </div>
+        <div class="willkommen">Willkommen im <a href="/">Weltenwald</a>!</div>
+          <div id="block-search-0" class="clear-block block block-search">
+
+
+  <div class="content"><form action="/light/english/your-browser-history-can-be-sniffed-64-lines-python-tested-firefox-353"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Geben Sie die Wörter ein, nach denen Sie suchen möchten." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Suchen"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-7H7bNiwTv3gIRaRlvb4IEhCSTUTa9e_StMbEulEKbA0" value="form-7H7bNiwTv3gIRaRlvb4IEhCSTUTa9e_StMbEulEKbA0"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+</div>
+</div>
+<div id="block-user-1" class="clear-block block block-user">
+
+  <h2>     </h2>
+
+  <div class="content"><ul class="menu"><li class="leaf first"><a href="/contact">Kontakt</a></li>
+<li class="leaf"><a href="/licht-lumo-light" title="Neue Inhalte auf draketo.de">Neue Inhalte</a></li>
+<li class="leaf"><a href="/deutsch" title="Deutsche Inhalte">Deutsch</a></li>
+<li class="leaf"><a href="/light/english" title="English content">English</a></li>
+<li class="leaf last"><a href="/impressum" title="Impressum">Impressum</a></li>
+</ul></div>
+</div>
+
+</div>
+
+        
+<div id="flaggen">
+  <a title="Deutsche Seiten: Ein Würfel System" href="/deutsch"><span id="flagge_de"></span></a><br />
+  <a title="Esperantaj Paĝoj: Unu Kubo Kodo" href="/esperanto"><span id="flagge_eo"></span></a><br />
+  <a title="English Pages: One Die System" href="/english"><span id="flagge_en"></span></a>
+</div>
+
+<div id="ews_zitat">
+          <div id="block-statistics-0" class="clear-block block block-statistics">
+
+  <h2>Beliebte Inhalte</h2>
+
+  <div class="content"><div class="item-list"><h3>Heute:</h3><ul><li class="first"><a href="/english/freenet/social-graph-snapshot">The Freenet social trust graph</a></li>
+<li><a href="/light/english/freenet/freenet-journalists-funding-proposal">Freenet for Journalists, funding proposal</a></li>
+<li><a href="/light/english">English</a></li>
+<li class="last"><a href="/light/english/simple-emacs-darkroom">Simple Emacs DarkRoom</a></li>
+</ul></div><br /><div class="item-list"><h3>Zuletzt angezeigt:</h3><ul><li class="first"><a href="/licht/politik/gedanken/ohrloecher-fuer-kinder">Ohrlöcher für Kinder?</a></li>
+<li><a href="/english/destroy-anonymous-bitcoin">3 steps to destroy Bitcoin for anonymous usage</a></li>
+<li><a href="/english/emacs/writing-papers-in-org-mode-acpd">Tutorial: Writing scientific papers for ACPD using emacs org-mode</a></li>
+<li class="last"><a href="/light/english/why-i-use-freenet/background-routing-and-probes-gsoc-2012">Background of Freenet Routing and the probes project (GSoC 2012)</a></li>
+</ul></div></div>
+</div>
+<div id="block-aggregator-feed-6" class="clear-block block block-aggregator">
+
+  <h2>sn.1w6.org news</h2>
+
+  <div class="content"><div class="item-list"><ul><li class="first"><a href="http://sn.1w6.org/notice/154124">drak: Are trust relationships different in anonymous networks? Get the tools to find out: http://draketo.de/english/freenet/social-graph-snapshot</a>
+</li>
+<li><a href="http://sn.1w6.org/notice/153877">drak: I hope you enjoy the read :) If you like the book, it would be cool if you’d pass it on and support it by buying the epub or print version.</a>
+</li>
+<li class="last"><a href="http://sn.1w6.org/notice/153873">drak: RT @markwatson Very nice! I just got a copy and started reading it. Thanks!</a>
+</li>
+</ul></div><div class="more-link"><a href="/aggregator/sources/6" title="Neueste Einträge dieses Feeds anzeigen.">more</a></div></div>
+</div>
+</div>
+
+        
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "" : "http://piwik.1w6.org/");_paq.push(["setSiteId", "2"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDocumentTitle", "Light/English/Free+Software/Your+browser+history+can+be+sniffed+with+just+64+lines+of+Python+%28tested+with+Firefox+3.5.3%29"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["setCookieDomain", ".draketo.de"]);_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();
+//--><!]]>
+</script>
+
+</body>
+</html>

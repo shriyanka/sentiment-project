@@ -5,7 +5,7 @@ Module 1.1: Opening each urls and fetching the raw text seperatly in each file a
 Tools: Python, Urlfetch, Subprocess-for making comand line request
 Date: 4th Dec, 2015 
 """
-
+#https://pythonprogramming.net/text-classification-nltk-tutorial/?completed=/wordnet-nltk-tutorial/
 import sys
 import subprocess
 import requests
