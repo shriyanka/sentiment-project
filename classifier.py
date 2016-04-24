@@ -39,7 +39,7 @@ featuresets = [(find_features(rev), category) for (rev, category) in documents]
 training_set = featuresets[:1900]
 
 # set that we'll test against.
-testing_set = featuresets[1900:]
+testing_set = featuresets[1950:1951]
 
 try:
     classifier_f = open("naivebayes.pickle", "rb")
@@ -52,6 +52,6 @@ except:
     save_classifier.close()
 
 print("\n\nClassifier accuracy percent:",(nltk.classify.accuracy(classifier, training_set))*100)
-print dir(classifier)
-print classifier
-print classifier.show_most_informative_features(100)
+#print dir(classifier)
+#print classifier
+#print classifier.show_most_informative_features(100)
