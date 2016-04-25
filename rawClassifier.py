@@ -34,6 +34,9 @@ def testClassifier(cl):
         print cl.classify(sen)
         x = input("Continue - 1, Exit - 0")
 
+def Classify(cl,word):
+    return cl.classify(word)
+
 ######################################################################
 # Script for perparing feature set and training and testing Classifier
 ######################################################################
@@ -54,11 +57,38 @@ word_features = list(all_words.keys())[:2000]
 
 featuresets = [(find_features(rev), category) for (rev, category) in documents]
 
+pos = True
+neg = True
+count = 0
+training_set = []
+
+for f,l in featuresets:
+    if l=='pos':
+        training_set.extend([(f,l)])
+        pos = False
+    elif l=='neg':
+        training_set.extend([(f,l)])
+        neg = False
+    if count == 500:
+        break
+    count+=1
+
+p,q=0,0
+for x,y in training_set:
+    if y=='pos':
+        p+=1
+    if y == 'neg':
+        q+=1
+
+print p,q
+
+random.shuffle(training_set)
+
 #set that we'll train our classifier with
-training_set = documents[0:100]#featuresets[:100] #documents[0:100] #
+#training_set = featuresets[0:100]+featuresets[1800:1900] #featuresets[:100] #documents[0:100] #
 
 # set that we'll test against.b
-testing_set = documents[101:200] # featuresets[101:200] #documents[101:200] #
+#testing_set = featuresets[101:200] # featuresets[101:200] #documents[101:200] #
 
 try:
     classifier_f = open("naivebayesclassifier.pickle", "rb")
